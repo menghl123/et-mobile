@@ -1,0 +1,24 @@
+<div [@slideBottomTop]="animationState" class="et-picker-popup" style="z-index: 1001">
+  <div class="et-picker-popup-content">
+    <div class="et-picker-popup-body">
+      <div>
+        <div class="et-picker-popup-header">
+          <div class="et-picker-popup-item et-picker-popup-header-left" (click)="cancel()">{{options.dismissText}}</div>
+          <div class="et-picker-popup-item et-picker-popup-title">{{options.title}}</div>
+          <div class="et-picker-popup-item et-picker-popup-header-right" (click)="ok()">{{options.okText}}</div>
+        </div>
+        <div class="et-picker" style="flex-direction: row; align-items: center;" #picker>
+          <div *ngFor="let item of data; let i = index" class="et-picker-col">
+            <div class="et-picker-col-indicator " style="top: 102px;" [ngStyle]="options.indicatorStyle"></div>
+            <div class="et-picker-col-mask" style="background-size: 100% 102px;" id={{i}}></div>
+            <div class="et-picker-col-content">
+              <div *ngFor="let val of item; let i = index" class="et-picker-col-item" id={{i}}>
+                {{val.label?val.label:val}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

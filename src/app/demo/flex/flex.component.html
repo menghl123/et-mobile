@@ -1,0 +1,82 @@
+<et-app animation="none">
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>按钮</ng-container>
+  </et-app-bar>
+
+  <et-app-body padding>
+    <h2>基础</h2>
+    <et-flex>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+    </et-flex>
+    <br>
+    <et-flex>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+    </et-flex>
+    <br>
+    <et-flex>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+      <et-flex-item>1</et-flex-item>
+    </et-flex>
+    <h2>wrap</h2>
+    <et-flex class="flex-wrap" [wrap]="'wrap'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+
+    <h2>align</h2>
+    <et-flex class="flex-wrap" [justify]="'center'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+    <et-flex class="flex-wrap" [justify]="'end'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+    <et-flex class="flex-wrap" [justify]="'between'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+    <et-flex class="flex-wrap" [align]="'start'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item" style="height: 10px">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+    <et-flex class="flex-wrap" [align]="'end'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item" style="height: 10px">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+
+    <et-flex class="flex-wrap" [align]="'baseline'">
+      <div class="wrap-item">1</div>
+      <div class="wrap-item" style="height: 20px">1</div>
+      <div class="wrap-item">1</div>
+    </et-flex>
+  </et-app-body>
+</et-app>

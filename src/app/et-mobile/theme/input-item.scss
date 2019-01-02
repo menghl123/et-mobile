@@ -1,0 +1,21 @@
+@import "./variables";
+
+et-input-item{
+  input{
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .et-list-view-item-leading{
+    width: 24%;
+    text-align: right;
+    white-space: nowrap;
+    .et-checkbox-item-text{
+      font-size: 1.4rem;
+      overflow: hidden;
+    }
+  }
+  .et-list-view-item-ending{
+    display: none !important;
+   }
+
+}

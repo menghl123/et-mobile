@@ -1,0 +1,26 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>
+      indicator
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body padding>
+    <h2>基础</h2>
+    <et-button (click)="openSinglePicker()" type="primary">打开单选picker</et-button>
+
+    <h2>多列</h2>
+    <et-button (click)="openMuilPicker()" type="primary">多列</et-button>
+
+    <h2>多列[不关联]</h2>
+    <et-button (click)="openMuilNoCascaderPicker()" type="primary">多列[不关联]</et-button>
+
+    <h2>默认选中</h2>
+    <et-button (click)="openValue()" type="primary">默认选中</et-button>
+
+  </et-app-body>
+</et-app>

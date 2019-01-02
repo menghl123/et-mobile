@@ -1,0 +1,15 @@
+et-flex-item {
+  background-color: #007aff;
+  color: white;
+  text-align: center;
+}
+
+.flex-wrap {
+  .wrap-item {
+    width: calc(20% - 20px);
+    background-color: #007aff;
+    color: white;
+    text-align: center;
+    margin: 10px;
+  }
+}

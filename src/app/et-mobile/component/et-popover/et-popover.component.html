@@ -1,0 +1,6 @@
+<div class="et-popover-wrapper">
+  <div *ngFor="let item of popverOptions?.data" class="et-popover-item" (click)="onItemClick(item)">
+    <et-icon *ngIf="item?.icon" name="{{item?.icon}}"></et-icon>
+    {{item?.label}}
+  </div>
+</div>

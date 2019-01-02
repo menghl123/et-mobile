@@ -1,0 +1,5 @@
+<et-backdrop *ngIf="isShow" (click)="onDbClick()"></et-backdrop>
+<div #innerMenu [ngStyle]="{'transform':transformStyle,'transition-duration':transformDurationStyle,'width':width}"
+     class="et-drawer-inner">
+  <ng-content></ng-content>
+</div>

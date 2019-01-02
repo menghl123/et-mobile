@@ -1,0 +1,35 @@
+<et-app>
+  <et-app-body>
+    <et-list-view>
+      <et-list-view-item [cssStyle]="{'background-color': '#007aff'}">
+        <ng-container leading>
+          <img style="margin:10px 0 ;width: 80px;padding: 4px 0;border-radius: 10px"
+               src="assets/svg/unlogin.svg" alt="">
+        </ng-container>
+        <ng-container content>
+        <span class="user-name">
+        冬夜的冷风
+        </span>
+        </ng-container>
+
+      </et-list-view-item>
+      <et-list-view-divider>
+        组件菜单
+      </et-list-view-divider>
+
+      <et-list-view-item (click)="onItemClick(com)" *ngFor="let com of components">
+        <ng-container content>{{com?.label}}</ng-container>
+        <ng-container ending>
+          {{com?.note}}
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-item>
+        <ng-container content>退出登录</ng-container>
+        <ng-container ending>
+          <et-icon name="mdi-close"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+    </et-list-view>
+  </et-app-body>
+</et-app>

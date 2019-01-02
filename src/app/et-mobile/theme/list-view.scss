@@ -1,0 +1,14 @@
+@import "./variables";
+
+et-list-view{
+  display: block;
+  .et-list-view-inner{
+    display: block;
+    .et-list-view-body{
+      position: relative;
+      background-color: inherit;
+    }
+  }
+
+}
+

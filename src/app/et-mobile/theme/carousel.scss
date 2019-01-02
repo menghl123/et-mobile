@@ -1,0 +1,68 @@
+@import "./variables";
+
+et-carousel {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  visibility: visible;
+  .et-slider-frame {
+    position: relative;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    box-sizing: border-box;
+    .et-slider-list {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 0;
+      cursor: inherit;
+      box-sizing: border-box;
+      et-carousel-item {
+        position: absolute;
+        display: inline-block;
+        list-style-type: none;
+        vertical-align: top;
+        height: auto;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  et-carousel-indicator {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    zoom: 1;
+    .et-carousel-wrap {
+      font-size: 18px;
+      color: #000;
+      background: 0 0;
+      text-align: center;
+      zoom: 1;
+      width: 100%;
+      .et-carousel-wrap-dot {
+        display: inline-block;
+        zoom: 1;
+        span {
+          display: block;
+          width: 8px;
+          height: 8px;
+          margin: 0 3px;
+          border-radius: 50%;
+          background: $textSecondColor;
+        }
+      }
+      .et-carousel-wrap-dot-active > span {
+        background: $primaryColor;
+      }
+    }
+  }
+}

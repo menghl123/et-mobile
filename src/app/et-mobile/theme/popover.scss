@@ -1,0 +1,21 @@
+@import "./variables";
+
+et-popover {
+
+  .et-popover-wrapper {
+    min-width: 80px;
+    background-color: $whiteColor;
+    padding: 4px 0;
+    border-radius: 4px;
+    .et-popover-item{
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      font-size: 1.4rem;
+      et-icon{
+        font-size: 1.8rem;
+        margin-right: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "./variables";
+
+et-tabbar {
+  position: relative;
+  top: auto;
+  height: auto;
+  visibility: visible;
+  opacity: 1;
+  .et-tabbar {
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+  .et-tabbar-primary {
+    background-color: $primaryColor;
+    et-icon {
+      color: $textLightColor;
+    }
+    span{
+      color: $textLightColor;
+    }
+  }
+  .et-tabbar-secondary {
+    background-color: $secondaryColor;
+    et-icon {
+      color: $textLightColor;
+    }
+    span{
+      color: $textLightColor;
+    }
+  }
+  .et-tabbar-danger {
+    background-color: $dangerColor;
+    et-icon {
+      color: $textLightColor;
+    }
+    span{
+      color: $textLightColor;
+    }
+  }
+  .et-tabbar-light {
+    background-color: $lightColor;
+    et-icon {
+      color: $darkColor;
+    }
+    span{
+      color: $darkColor;
+    }
+  }
+  .et-tabbar-dark {
+    background-color: $darkColor;
+    et-icon {
+      color: $textLightColor;
+    }
+    span{
+      color: $textLightColor;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<div class="et-carousel-wrap">
+  <div *ngFor="let item of items"
+       class="et-carousel-wrap-dot"
+       [class.et-carousel-wrap-dot-active]="item.active"
+  >
+    <span [ngStyle]="item.active ? dotActiveStyle : dotStyle"></span>
+  </div>
+</div>

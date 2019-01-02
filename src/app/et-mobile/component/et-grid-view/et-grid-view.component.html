@@ -1,0 +1,70 @@
+<ng-container *ngIf="!isCarousel">
+  <et-flex *ngFor="let item of gridData; let i = index;"
+        [justify]="'center'"
+        [align]="'stretch'"
+  >
+    <et-flex-item etTouchFeedback
+              *ngFor="let subItem of item; let j = index;"
+              [ngClass]="itemCls"
+              [ngStyle]="itemStyle"
+              [className]="['et-grid-item-active']"
+              [activeStyle]="activeStyle"
+    >
+      <div *ngIf="subItem !== null"
+           class="{{defaultProps.prefixCls}}-item-content"
+           (click)="click(subItem,i * columnNum + j)"
+      >
+        <div class="{{defaultProps.prefixCls}}-item-inner-content column-num-{{columnNum}}">
+          <img *ngIf="subItem.icon && isURL(subItem.icon)"
+               src="{{subItem.icon}}"
+               class="{{defaultProps.prefixCls}}-icon"
+          >
+          <et-icon *ngIf="subItem.icon && !isURL(subItem.icon)"
+                [type]="subItem.icon"
+                [size]="subItem.size"
+          ></et-icon>
+          <div class="{{defaultProps.prefixCls}}-text">{{subItem.text}}</div>
+        </div>
+      </div>
+      <div *ngIf="subItem === null" class="{{defaultProps.prefixCls}}-null-item"></div>
+    </et-flex-item>
+    <ng-content></ng-content>
+  </et-flex>
+</ng-container>
+
+<et-carousel *ngIf="isCarousel && carouselDataTmp.length > 0"
+          [autoplay]="false"
+          [infinite]="true"
+          [selectedIndex]="0"
+          [autoplayInterval]='3000'
+          [dots]="carouselProps.dots"
+          [dragging]="carouselProps.dragging"
+>
+  <et-carousel-item *ngFor="let gridData of carouselDataTmp"
+                 class="{{defaultProps.prefixCls}}-carousel-page"
+                 style="display: block;"
+  >
+    <et-flex *ngFor="let item of gridData; let i = index;"
+          [justify]="'center'"
+          [align]="'stretch'"
+    >
+      <et-flex-item etTouchFeedback 
+                *ngFor="let subItem of item; let j = index;"
+                class="{{defaultProps.prefixCls}}-item"
+                [ngStyle]="itemStyle"
+                [className]="['et-grid-item-active']"
+      >
+        <div *ngIf="subItem !== null"
+             class="{{defaultProps.prefixCls}}-item-content"
+             (click)="click(subItem,i * columnNum + j)"
+        >
+          <div class="{{defaultProps.prefixCls}}-item-inner-content column-num-4">
+            <img class="{{defaultProps.prefixCls}}-icon" src="{{subItem.icon}}">
+            <div class="{{defaultProps.prefixCls}}-text">{{subItem.text}}</div>
+          </div>
+        </div>
+        <div *ngIf="subItem === null" class="{{defaultProps.prefixCls}}-null-item"></div>
+      </et-flex-item>
+    </et-flex>
+  </et-carousel-item>
+</et-carousel>

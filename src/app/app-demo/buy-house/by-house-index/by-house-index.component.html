@@ -1,0 +1,198 @@
+<et-app>
+  <et-app-bar [cssStyle]="{'background-color': '#007aff','color':'white'}">
+    <ng-container title>
+      成都摇号助手
+    </ng-container>
+    <ng-container end>
+      <div class="operation-bar">
+        <et-icon etPopover (optionSelect)="onOptionSelect()" [data]="popoverData"
+                 name="mdi-dots-horizontal"></et-icon>
+        <et-icon (click)="cancel()" name="mdi-power-standby"></et-icon>
+      </div>
+    </ng-container>
+    <!--<ng-container bottom>-->
+    <!--<et-search-bar  style="width: 100%;background: #fff" [placeholder]="'Search'" [maxLength]="8"></et-search-bar>-->
+    <!--</ng-container>-->
+  </et-app-bar>
+
+  <et-app-body>
+    <et-carousel [infinite]="true"
+                 [vertical]="false"
+                 [autoplay]="true"
+    >
+      <et-carousel-item *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;" [ngStyle]="{'height': state.imgHeight}">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style="width: 100%;"/>
+        </div>
+      </et-carousel-item>
+    </et-carousel>
+
+
+    <et-card style="position: relative;top: -10px">
+      <et-flex [justify]="'between'" style="text-align: center;height: 6rem">
+        <et-flex-item>
+          <div style="font-size: 20px">26</div>
+          <div>最新开盘</div>
+        </et-flex-item>
+        <et-flex-item>
+          <div style="font-size: 20px">26</div>
+          <div>最新开盘</div>
+        </et-flex-item>
+        <et-flex-item>
+          <div style="font-size: 20px">26</div>
+          <div>最新开盘</div>
+        </et-flex-item>
+        <et-flex-item>
+          <div style="font-size: 20px">26</div>
+          <div>最新开盘</div>
+        </et-flex-item>
+      </et-flex>
+    </et-card>
+    <et-grid-view [columnNum]="5" [hasLine]="false" [data]="data" (OnClick)="click($event)"></et-grid-view>
+    <div class="info">
+      <et-carousel [infinite]="true"
+                   [vertical]="true"
+                   [autoplay]="true"
+                   [dots]="false"
+
+      >
+        <et-carousel-item *ngFor="let item of infos">
+          {{item}}
+        </et-carousel-item>
+      </et-carousel>
+    </div>
+
+    <et-list-view>
+      <et-list-view-divider>
+        <et-flex style="width: 100%" [justify]="'between'">
+          <et-flex-item>
+            最新摇号状态
+          </et-flex-item>
+          <et-flex-item style=" text-align: right">
+            更多
+            <et-icon name="mdi-arrow-right"></et-icon>
+          </et-flex-item>
+        </et-flex>
+      </et-list-view-divider>
+
+      <et-list-view-item>
+        <ng-container leading>
+          <img style="width: 80px"
+               src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1546335094&di=1c819a6816c79979c64e2dcf92f4ccfb&src=http://www.xinjiadiy.com/images/article_img/tuwen/20170509/5349.jpg"
+               alt="">
+        </ng-container>
+
+        <ng-container content>
+          <et-flex [align]="'start'" [direction]="'column'">
+            <div>回京新城三期121212</div>
+            <div>回京新城三期121212</div>
+            <div>摇号时间：2019-12-12</div>
+          </et-flex>
+        </ng-container>
+
+        <ng-container ending>
+          <et-icon name="mdi-chevron-right"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-item>
+        <ng-container leading>
+          <img style="width: 80px"
+               src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1546335094&di=1c819a6816c79979c64e2dcf92f4ccfb&src=http://www.xinjiadiy.com/images/article_img/tuwen/20170509/5349.jpg"
+               alt="">
+        </ng-container>
+
+        <ng-container content>
+          <et-flex [align]="'start'" [direction]="'column'">
+            <div>回京新城三期121212</div>
+            <div>回京新城三期121212</div>
+            <div>摇号时间：2019-12-12</div>
+          </et-flex>
+        </ng-container>
+
+        <ng-container ending>
+          <et-icon name="mdi-chevron-right"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-item>
+        <ng-container leading>
+          <img style="width: 80px"
+               src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1546335094&di=1c819a6816c79979c64e2dcf92f4ccfb&src=http://www.xinjiadiy.com/images/article_img/tuwen/20170509/5349.jpg"
+               alt="">
+        </ng-container>
+
+        <ng-container content>
+          <et-flex [align]="'start'" [direction]="'column'">
+            <div>回京新城三期121212</div>
+            <div>回京新城三期121212</div>
+            <div>摇号时间：2019-12-12</div>
+          </et-flex>
+        </ng-container>
+
+        <ng-container ending>
+          <et-icon name="mdi-chevron-right"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-item>
+        <ng-container leading>
+          <img style="width: 80px"
+               src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1546335094&di=1c819a6816c79979c64e2dcf92f4ccfb&src=http://www.xinjiadiy.com/images/article_img/tuwen/20170509/5349.jpg"
+               alt="">
+        </ng-container>
+
+        <ng-container content>
+          <et-flex [align]="'start'" [direction]="'column'">
+            <div>回京新城三期121212</div>
+            <div>回京新城三期121212</div>
+            <div>摇号时间：2019-12-12</div>
+          </et-flex>
+        </ng-container>
+
+        <ng-container ending>
+          <et-icon name="mdi-chevron-right"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-item>
+        <ng-container leading>
+          <img style="width: 80px"
+               src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1546335094&di=1c819a6816c79979c64e2dcf92f4ccfb&src=http://www.xinjiadiy.com/images/article_img/tuwen/20170509/5349.jpg"
+               alt="">
+        </ng-container>
+
+        <ng-container content>
+          <et-flex [align]="'start'" [direction]="'column'">
+            <div>回京新城三期121212</div>
+            <div>回京新城三期121212</div>
+            <div>摇号时间：2019-12-12</div>
+          </et-flex>
+        </ng-container>
+
+        <ng-container ending>
+          <et-icon name="mdi-chevron-right"></et-icon>
+        </ng-container>
+      </et-list-view-item>
+
+      <et-list-view-divider>
+        <div style="text-align: center;width: 100%">
+          查看更多
+        </div>
+      </et-list-view-divider>
+
+    </et-list-view>
+    <br>
+    <br>
+    <br>
+  </et-app-body>
+  <et-footer>
+    <et-tabbar type="light">
+      <et-tabbar-item index="1" icon="mdi-account">首页</et-tabbar-item>
+      <et-tabbar-item index="2" icon="mdi-account">热门楼盘</et-tabbar-item>
+      <et-tabbar-item index="3" icon="mdi-account">问答</et-tabbar-item>
+      <et-tabbar-item index="4" icon="mdi-account">分享堂</et-tabbar-item>
+      <et-tabbar-item index="5" icon="mdi-account">我的</et-tabbar-item>
+    </et-tabbar>
+  </et-footer>
+</et-app>

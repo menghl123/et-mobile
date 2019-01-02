@@ -1,0 +1,54 @@
+@import "./variables";
+
+et-list-view-item {
+  .et-list-view-item {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    padding-left: 0.4rem;
+    min-height: 44px;
+    background-color: #fff;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: background-color .2s;
+    -webkit-align-items: center;
+    align-items: center;
+    .et-list-view-item-leading {
+      margin-right: 0.8rem;
+      font-size: 1.2rem;
+    }
+    .et-list-view-item-ending {
+      display: block;
+      margin-right: 0.8rem;
+      margin-left: 0.8rem;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      opacity: 0.8;
+      font-size: 1.2rem;
+      et-icon {
+        font-size: 1.8rem;
+      }
+    }
+    .et-list-view-item-body {
+      align-items: center;
+      position: relative;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex: 1;
+      flex: 1;
+      -webkit-align-self: stretch;
+      align-self: stretch;
+      overflow: hidden;
+      padding: 12.5px 15px 12.5px 0;
+      opacity: 0.8;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+et-list-view-item {
+  .et-list-view-item {
+    border-bottom: 1px solid $borderColorLow;
+  }
+}

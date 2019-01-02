@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./app/et-mobile/et-mobile";
+@import "~@mdi/font/css/materialdesignicons.css";
+
+html {
+  font-size: 10px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+body{
+  background-color: rgb(245, 245, 249);
+}
+
+code {
+  color: #d91e18;
+}
+.wrapCls{
+  background-color: #007aff;
+}
+et-tabbar .et-tabbar-light {
+  background-color: #fff;
+}

@@ -1,0 +1,15 @@
+<div #picker class="et-picker" style="flex-direction: row; align-items: center;">
+  <div *ngFor="let item of data; let i = index" class="et-picker-col">
+    <div #indicator class="et-picker-col-indicator " [ngStyle]="indicatorStyle"></div>
+    <div id={{i}} class="et-picker-col-mask" style="background-size: 100% 102px;"></div>
+    <div class="et-picker-col-content">
+      <div *ngFor="let val of item; let i = index"
+           id={{i}}
+           class="et-picker-col-item"
+           [ngStyle]="itemStyle"
+      >
+        {{val.label?val.label:val}}
+      </div>
+    </div>
+  </div>
+</div>

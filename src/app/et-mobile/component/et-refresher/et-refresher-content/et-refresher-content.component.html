@@ -1,0 +1,9 @@
+<div class="et-refresher-content-icon">
+  <et-indicator *ngIf="refresherComponent.state === 'fresh'"></et-indicator>
+  <et-icon name="mdi-arrow-up" *ngIf="refresherComponent.state === 'ready'"></et-icon>
+  <et-icon name="mdi-arrow-down" *ngIf="refresherComponent.state === 'pulling'"></et-icon>
+  <et-icon name="mdi-check" *ngIf="refresherComponent.state === 'complete'"></et-icon>
+</div>
+<div class="et-reshresher-content-label">
+  {{refreshText()}}
+</div>

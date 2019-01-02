@@ -1,0 +1,65 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+      卡片
+    </ng-container>
+    <ng-container end>
+      <et-icon type="secondary" name="mdi-magnify"></et-icon>
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body>
+    <h2>基础使用</h2>
+    <et-card>
+      <et-card-header>
+        我是Angulard
+      </et-card-header>
+      <et-card-body>
+        我是Angulard
+      </et-card-body>
+      <et-card-footer>
+        我是Angulard
+      </et-card-footer>
+    </et-card>
+
+    <h2>extra</h2>
+    <et-card>
+      <et-card-header>
+        我是Angulard
+        <ng-container extra>
+          <et-icon name="mdi-search-web"></et-icon>
+        </ng-container>
+      </et-card-header>
+      <et-card-body>
+        我是Angulard
+      </et-card-body>
+      <et-card-footer>
+        我是Angulard
+        <ng-container extra>
+          <et-icon name="mdi-search-web"></et-icon>
+        </ng-container>
+      </et-card-footer>
+    </et-card>
+
+    <h2>full</h2>
+    <et-card [full]="true">
+      <et-card-header>
+        我是Angulard
+        <ng-container extra>
+          <et-icon name="mdi-search-web"></et-icon>
+        </ng-container>
+      </et-card-header>
+      <et-card-body>
+        我是Angulard
+      </et-card-body>
+      <et-card-footer>
+        我是Angulard
+        <ng-container extra>
+          <et-icon name="mdi-search-web"></et-icon>
+        </ng-container>
+      </et-card-footer>
+    </et-card>
+  </et-app-body>
+</et-app>

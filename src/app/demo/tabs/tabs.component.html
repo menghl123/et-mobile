@@ -1,0 +1,161 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>
+      标签
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body>
+    <h2>基础</h2>
+    <div style="height: 40vh">
+      <et-tabs [useOnPan]="true"
+               [swipeable]="true"
+               [activeTab]="0"
+               [page]="3"
+               [tabBarActiveTextColor]="'#1890ff'"
+      >
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white; align-items: center;justify-content: center;"
+                [title]="titleTemplate"
+        >
+          <ng-template #titleTemplate>
+            <et-badge [text]="3">
+              <div>First Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of first tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate1"
+        >
+          <ng-template #titleTemplate1>
+            <et-badge [text]="'今日(20)'">
+              <div>Second Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of second tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate2"
+        >
+          <ng-template #titleTemplate2>
+            <et-badge [dot]="true">
+              <div>Third Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of third tab
+          </div>
+        </et-tab>
+      </et-tabs>
+    </div>
+    <h2>下方</h2>
+    <div style="height: 40vh">
+      <et-tabs [useOnPan]="true"
+               [swipeable]="true"
+               [activeTab]="0"
+               [tabBarPosition]="'bottom'"
+               [page]="3"
+               [tabBarActiveTextColor]="'#1890ff'"
+      >
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white; align-items: center;justify-content: center;"
+                [title]="titleTemplate"
+        >
+          <ng-template #titleTemplate>
+            <et-badge [text]="3">
+              <div>First Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of first tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate1"
+        >
+          <ng-template #titleTemplate1>
+            <et-badge [text]="'今日(20)'">
+              <div>Second Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of second tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate2"
+        >
+          <ng-template #titleTemplate2>
+            <et-badge [dot]="true">
+              <div>Third Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of third tab
+          </div>
+        </et-tab>
+      </et-tabs>
+
+    </div>
+
+
+
+    <h2>垂直</h2>
+    <div style="height: 40vh">
+      <et-tabs [useOnPan]="true"
+               [swipeable]="true"
+               [tabBarPosition]="'left'"
+               [tabDirection]="'vertical'"
+               [activeTab]="0"
+               [tabBarPosition]="'bottom'"
+               [page]="3"
+               [tabBarActiveTextColor]="'#1890ff'"
+      >
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white; align-items: center;justify-content: center;"
+                [title]="titleTemplate"
+        >
+          <ng-template #titleTemplate>
+            <et-badge [text]="3">
+              <div>First Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of first tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate1"
+        >
+          <ng-template #titleTemplate1>
+            <et-badge [text]="'今日(20)'">
+              <div>Second Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of second tab
+          </div>
+        </et-tab>
+        <et-tab style="display: flex; height: 150px; width: 100%; background-color: white;align-items: center;justify-content: center;"
+                [title]="titleTemplate2"
+        >
+          <ng-template #titleTemplate2>
+            <et-badge [dot]="true">
+              <div>Third Tab</div>
+            </et-badge>
+          </ng-template>
+          <div style="display: flex; align-items: center;justify-content: center;height: 150px;background-color: #fff">
+            Content of third tab
+          </div>
+        </et-tab>
+      </et-tabs>
+
+    </div>
+  </et-app-body>
+</et-app>

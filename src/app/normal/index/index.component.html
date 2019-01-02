@@ -1,0 +1,20 @@
+<et-drawer #drawer>
+  <app-drawer></app-drawer>
+</et-drawer>
+
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon (click)="drawer.toggle()" type="primary" name="mdi-menu"></et-icon>
+    </ng-container>
+    <ng-container title>Et-Mobile</ng-container>
+    <ng-container end>
+      <et-icon etPopover (optionSelect)="onOptionSelect()" [data]="popoverData" type="secondary" name="mdi-dots-horizontal"></et-icon>
+      <et-icon type="secondary" name="mdi-magnify"></et-icon>
+    </ng-container>
+  </et-app-bar>
+
+  <et-app-body>
+    <h1>大家好</h1>
+  </et-app-body>
+</et-app>

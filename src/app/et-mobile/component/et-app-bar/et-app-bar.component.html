@@ -1,0 +1,16 @@
+<div class="appbar-wrapper {{cssClass}}" [ngStyle]="cssStyle">
+  <div class="appbar-start">
+    <ng-content select="[start]"></ng-content>
+  </div>
+  <div class="appbar-title">
+    <span>
+          <ng-content select="[title]"></ng-content>
+    </span>
+  </div>
+  <div class="appbar-end">
+    <ng-content select="[end]"></ng-content>
+  </div>
+</div>
+<div class="appbar-wrapper">
+  <ng-content select="[bottom]"></ng-content>
+</div>

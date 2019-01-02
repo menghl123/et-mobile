@@ -1,0 +1,27 @@
+@import "./variables";
+
+et-refresher-content {
+  display: block;
+  width: 100%;
+  height: 100%;
+  .et-refresher-content-icon {
+    position: absolute;
+    width: 60%;
+    text-align: center;
+    line-height: 50px;
+    et-icon {
+      color: $primaryColor;
+      font-size: 1.6rem;
+    }
+  }
+  .et-reshresher-content-label {
+    height: 100%;
+    line-height: 50px;
+    display: inline-block;
+    text-align: left;
+    color: $textBlackColor;
+    opacity: 0.8;
+    font-size: 13px;
+  }
+
+}

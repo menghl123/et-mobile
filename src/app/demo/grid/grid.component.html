@@ -1,0 +1,20 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>
+      indicator
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body>
+    <h2>有边框</h2>
+    <et-grid-view  [data]="data" (OnClick)="click($event)"></et-grid-view>
+    <h2>无边框</h2>
+    <et-grid-view [hasLine]="false" [data]="data" (OnClick)="click($event)"></et-grid-view>
+    <h2>基础</h2>
+    <et-grid-view [columnNum]="5" [isCarousel]="true" [activeStyle]="false" [data]="data" (OnClick)="click($event)"></et-grid-view>
+  </et-app-body>
+</et-app>

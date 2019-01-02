@@ -1,0 +1,13 @@
+@import "./variables";
+
+et-footer {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 10;
+  background-color: $whiteColor;
+  color: $textBlackColor;
+  border-bottom: 1px solid $borderColorLow;
+}

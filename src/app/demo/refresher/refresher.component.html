@@ -1,0 +1,24 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>
+      下拉刷新
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body>
+    <et-refresher (refreshEvent)="onRefresh($event)">
+      <et-refresher-content></et-refresher-content>
+    </et-refresher>
+
+    <et-list-view *ngFor="let i of array">
+      <et-list-view-item>
+        <ng-container leading>{{i?.label}}</ng-container>
+        <ng-container content>{{i?.label}}</ng-container>
+      </et-list-view-item>
+    </et-list-view>
+  </et-app-body>
+</et-app>

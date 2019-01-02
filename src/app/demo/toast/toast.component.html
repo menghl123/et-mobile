@@ -1,0 +1,19 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>
+      indicator
+    </ng-container>
+    <ng-container end>
+      <et-icon (click)="doToast()" type="secondary" name="mdi-magnify"></et-icon>
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body padding>
+    <h2>基础</h2>
+    <et-button (click)="doToast()" type="primary">打开单选picker</et-button>
+  </et-app-body>
+</et-app>

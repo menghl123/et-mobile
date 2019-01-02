@@ -1,0 +1,44 @@
+<et-app animation="none">
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>徽章</ng-container>
+  </et-app-bar>
+
+  <et-app-body padding>
+    <h2>基础</h2>
+    <et-badge></et-badge>
+    <et-list-view>
+      <et-list-view-item>
+        <ng-container leading>
+          <et-badge [dot]="true" [text]="77" class="dot-badge">
+            <et-icon name="mdi-account"></et-icon>
+          </et-badge>
+        </ng-container>
+      </et-list-view-item>
+      <et-list-view-item>
+        <ng-container leading>
+          <et-badge  [text]="'促'" [corner]="true">
+            <div class="corner-badge">Use corner prop</div>          </et-badge>
+        </ng-container>
+        <ng-container ending>
+          促销大活动
+        </ng-container>
+      </et-list-view-item>
+
+
+      <et-list-view-item>
+        <ng-container content>
+          <et-badge [text]="'减'" [hot]="true" style="margin-left:12px;"></et-badge>
+          <br>
+          <et-badge [text]="'减'" [hot]="true" style="margin-left:12px;"></et-badge>
+        </ng-container>
+        <ng-container ending>
+          促销大活动
+        </ng-container>
+      </et-list-view-item>
+    </et-list-view>
+
+  </et-app-body>
+</et-app>

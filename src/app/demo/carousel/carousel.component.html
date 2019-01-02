@@ -1,0 +1,45 @@
+<et-app>
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+      卡片
+    </ng-container>
+    <ng-container end>
+      <et-icon type="secondary" name="mdi-magnify"></et-icon>
+    </ng-container>
+  </et-app-bar>
+
+
+  <et-app-body>
+    <h2>基础使用</h2>
+    <et-carousel [infinite]="true"
+                 [vertical]="false"
+                 [autoplay]="true"
+                 (beforeChange)="beforeChange($event)"
+                 (afterChange)="afterChange($event)"
+    >
+      <et-carousel-item *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;" [ngStyle]="{'height': state.imgHeight}">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style="width: 100%;"/>
+        </div>
+      </et-carousel-item>
+    </et-carousel>
+
+    <h2>竖向</h2>
+    <et-carousel [infinite]="true"
+                 [vertical]="true"
+                 [autoplay]="true"
+                 [dots]="false"
+                 [autoplayInterval]="300"
+                 [dragging]="false"
+                 (beforeChange)="beforeChange($event)"
+                 (afterChange)="afterChange($event)"
+    >
+      <et-carousel-item *ngFor="let item of state.data">
+        <div style="display: inline-block; width: 100%;" [ngStyle]="{'height': state.imgHeight}">
+          <img src="https://zos.alipayobjects.com/rmsportal/{{item}}.png" style="width: 100%;"/>
+        </div>
+      </et-carousel-item>
+    </et-carousel>
+  </et-app-body>
+</et-app>

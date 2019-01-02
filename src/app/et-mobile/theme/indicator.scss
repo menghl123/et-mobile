@@ -1,0 +1,106 @@
+@import "./variables";
+
+et-indicator {
+  .et-indicator-wrapper {
+    display: inline-block;
+    height: auto;
+    .et-indicator-shape {
+      display: inline-block;
+      height: auto;
+      span {
+        display: inline-block;
+        width: 0.4rem;
+        margin-left: 1px;
+        border-radius: 4px;
+        height: 0.2rem;
+        background: $primaryColor;
+        -webkit-animation: load 1s ease infinite;
+      }
+      @-webkit-keyframes load {
+        0% {
+          height: 0.2rem;
+        }
+        20% {
+          height: 0.4rem;
+        }
+        30% {
+          height: 0.6rem;
+        }
+        40% {
+          height: 0.8rem;
+        }
+        50% {
+          height: 1rem;
+        }
+        60% {
+          height: 1rem;
+        }
+        70% {
+          height: 1rem;
+        }
+        80% {
+          height: 0.8rem;
+        }
+        90% {
+          height: 0.6rem;
+        }
+        100% {
+          height: 0.4rem;
+        }
+      }
+      span:nth-child(2) {
+        -webkit-animation-delay: 0.2s;
+      }
+      span:nth-child(3) {
+        -webkit-animation-delay: 0.4s;
+      }
+      span:nth-child(4) {
+        -webkit-animation-delay: 0.6s;
+      }
+      span:nth-child(5) {
+        -webkit-animation-delay: 0.8s;
+      }
+    }
+  }
+
+  .et-indicator-primary {
+    .et-indicator-shape{
+      span {
+        background-color: $primaryColor;
+      }
+    }
+  }
+
+  .et-indicator-secondary {
+    .et-indicator-shape{
+      span {
+        background-color: $secondaryColor;
+      }
+    }
+  }
+
+  .et-indicator-danger {
+    .et-indicator-shape{
+      span {
+        background-color: $dangerColor;
+      }
+    }
+  }
+
+  .et-indicator-light {
+    .et-indicator-shape{
+      span {
+        background-color: $lightColor;
+      }
+    }
+  }
+
+  .et-indicator-dark {
+    .et-indicator-shape{
+      span {
+        background-color: $darkColor;
+      }
+    }
+  }
+
+}

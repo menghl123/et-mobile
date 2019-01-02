@@ -1,0 +1,40 @@
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: buttontext;
+  background-color: buttonface;
+  box-sizing: border-box;
+  padding: 2px 6px 3px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonface;
+  border-image: initial;
+}
+
+[tappable], [tappable] div, [tappable] et-icon, [tappable] et-label, [tappable] span, a, a div, a et-icon, a et-label, a span, button, button div, button et-icon, button et-label, button span, input, textarea {
+  -ms-touch-actet: manipulatet;
+  touch-actet: manipulatet;
+}
+
+[padding] {
+  padding: 0.4rem;
+}
+
+.text-center {
+  text-align: center;
+}

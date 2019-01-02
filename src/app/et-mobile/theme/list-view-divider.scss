@@ -1,0 +1,19 @@
+@import "./variables";
+
+et-list-view-divider{
+  .et-list-view-divider-inner{
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    padding: 4px 0 4px 4px;
+    background-color: #f1f1f1;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: background-color .2s;
+    -webkit-align-items: center;
+    align-items: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+}

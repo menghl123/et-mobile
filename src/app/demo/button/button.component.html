@@ -1,0 +1,59 @@
+<et-app animation="none">
+  <et-app-bar>
+    <ng-container start>
+      <et-icon etRouter name="mdi-arrow-left"></et-icon>
+    </ng-container>
+    <ng-container title>按钮</ng-container>
+  </et-app-bar>
+
+  <et-app-body padding>
+    <h2>基础</h2>
+    <et-button>基础</et-button>
+
+    <h2>类型 <code>type</code></h2>
+    <et-button type="primary">primary</et-button>
+    <et-button type="danger">danger</et-button>
+    <et-button type="secondary">secondary</et-button>
+    <et-button type="light">light</et-button>
+    <et-button type="dark">dark</et-button>
+
+    <h2>满宽度button <code>block</code></h2>
+    <div style="padding: 10px">
+      <et-button [block]="true" type="primary">primary</et-button>
+      <et-button [block]="true" type="danger">danger</et-button>
+      <et-button [block]="true" type="secondary">secondary</et-button>
+      <et-button [block]="true" type="light">light</et-button>
+      <et-button [block]="true" type="dark">dark</et-button>
+    </div>
+
+    <h2>外边框 <code>outline</code></h2>
+    <et-button [outline]="true" type="primary">primary</et-button>
+    <et-button [outline]="true" type="danger">danger</et-button>
+    <et-button [outline]="true" type="secondary">secondary</et-button>
+    <et-button [outline]="true" type="light">light</et-button>
+    <et-button [outline]="true" type="dark">dark</et-button>
+
+    <h2>纯字体 <code>clear</code></h2>
+    <et-button [clear]="true" type="primary">primary</et-button>
+    <et-button [clear]="true" type="danger">danger</et-button>
+    <et-button [clear]="true" type="secondary">secondary</et-button>
+    <et-button [clear]="true" type="light">light</et-button>
+    <et-button [clear]="true" type="dark">dark</et-button>
+
+
+    <h2>圆角 <code>round</code></h2>
+    <div style="padding: 10px">
+      <et-button [round]="true" type="primary">primary</et-button>
+      <et-button [round]="true" type="danger">danger</et-button>
+      <et-button [round]="true" type="secondary">secondary</et-button>
+      <et-button [round]="true" type="light">light</et-button>
+      <et-button [round]="true" type="dark">dark</et-button>
+    </div>
+
+    <h2>尺寸 <code>size</code></h2>
+    <div>
+      <et-button [size]="'large'" type="primary">primary</et-button>
+      <et-button [size]="'small'" type="light">light</et-button>
+    </div>
+  </et-app-body>
+</et-app>
